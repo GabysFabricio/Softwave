@@ -7,12 +7,12 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #f4f4f4;
+    background-color: #083856;
+    position: relative;
 }
 
 .content {
     text-align: center;
-    position: relative;
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
@@ -22,23 +22,29 @@ body {
     position: absolute;
     top: 0;
     right: 0;
-    width: 100px; /* Ajuste o tamanho conforme necessário */
+    width: 300px; /* Ajuste o tamanho conforme necessário */
 }
 
 .borda-inferior {
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 100px; /* Ajuste o tamanho conforme necessário */
+    width: 300px; /* Ajuste o tamanho conforme necessário */
     rotate: 180deg;
 }
 
 p {
     margin-top: 50px; /* Espaço para o título */
+    color: #FFFFFF;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 20px;
 }
 
 h1 {
     margin-top: 20px;
+    color: #FFFFFF;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
 }
 
 .buttons {
@@ -46,7 +52,7 @@ h1 {
 }
 
 button {
-    background-color: #4CAF50; /* Green */
+    background-color: #A7D5F2; /* Green */
     border: none;
     color: white;
     padding: 15px 32px;
@@ -56,10 +62,21 @@ button {
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
-    border-radius: 12px;
+    border-radius: 7px;
     transition: background-color 0.3s;
+    width: 200px;
 }
 
 button:hover {
     background-color: #45a049;
 }
+
+button i {
+    margin-right: 8px; /* Espaço entre o ícone e o texto */
+}
+
+h1{
+    margin-top: -200px;
+    font-size: 50px;
+}
+

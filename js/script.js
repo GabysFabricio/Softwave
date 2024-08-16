@@ -1,57 +1,21 @@
-function openPopup(text) {
-    document.getElementById('popup').style.display = 'flex';
-    document.getElementById('popup-text').innerText = text;
-    if (text === 'Fundadores') {
-        // Adicione conteúdo dos fundadores aqui
-        const fundadoresContainer = document.getElementById('fundadores-container');
-        fundadoresContainer.innerHTML = `
-            <div class="fundador">
-                <img src="img/fundador1.jpg" alt="Fundador 1">
-                <div class="fundador-info">
-                    <h3>Ruan</h3>
-                    <p>Cargo</p>
-                </div>
-                <div class="fundador-buttons">
-                    <button class="fundador-button">Ler Sobre</button>
-                    <button class="fundador-button">Instagram</button>
-                    <button class="fundador-button">GitHub</button>
-                </div>
-            </div>
+function openPopup(fundador) {
+    var popup = document.getElementById("popup");
+    var popupText = document.getElementById("popup-text");
 
-
-            <div class="fundador">
-            <img src="img/fundador2.jpg" alt="Fundador 1">
-            <div class="fundador-info">
-                <h3>Bruno</h3>
-                <p>Cargo</p>
-            </div>
-            <div class="fundador-buttons">
-                <button class="fundador-button">Ler Sobre</button>
-                <button class="fundador-button">Instagram</button>
-                <button class="fundador-button">GitHub</button>
-            </div>
-        </div>
-
-        <div class="fundador">
-        <img src="img/fundador3.jpg" alt="Fundador 1">
-        <div class="fundador-info">
-            <h3>Gabrielly</h3>
-            <p>Cargo</p>
-        </div>
-        <div class="fundador-buttons">
-            <button class="fundador-button">Ler Sobre</button>
-            <button class="fundador-button">Instagram</button>
-            <button class="fundador-button">GitHub</button>
-        </div>
-    </div>
-            `;
-    } else {
-        // Limpe o conteúdo do container de fundadores
-        document.getElementById('fundadores-container').innerHTML = '';
+    // Defina o texto com base no fundador
+    if (fundador === 1) {
+        popupText.textContent = "Informações sobre o Ruan: Ruan Padilha é o Desenvolvedor Fullstack Chefe conhecido por sua visão estratégica e habilidades excepcionais em todas as camadas de desenvolvimento. Sua liderança técnica impulsiona a inovação e qualidade dos projetos, transformando desafios complexos em soluções eficientes, elevando nossa empresa a novos patamares de excelência tecnológica";
+        
+    } else if (fundador === 2) {
+        popupText.textContent = "Informações sobre o Bruno: Bruno Tavares, Desenvolvedor Fullstack e Analista de Dados, une habilidades técnicas e analíticas para criar soluções robustas e fornecer insights valiosos. Sua capacidade de integrar dados complexos com funcionalidades de software torna-o essencial para impulsionar a inovação e a precisão em cada projeto. ";
+    } else if (fundador === 3) {
+        popupText.textContent = "Informações sobre a Gaby: Gabrielly Fabricio, como Chief Product Officer (CPO) e desenvolvedora fullstack auxiliar, combina visão estratégica com expertise técnica. Ela lidera a criação de produtos inovadores e garante a execução impecável dos códigos, equilibrando liderança e desenvolvimento técnico para ser a alma criativa e a engenheira do nosso sucesso.";
     }
+
+    popup.style.display = "block";
 }
 
 function closePopup() {
-    document.getElementById('popup').style.display = 'none';
+    var popup = document.getElementById("popup");
+    popup.style.display = "none";
 }
-
